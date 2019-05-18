@@ -4,7 +4,6 @@ Rcpp::sourceCpp('trans_gunawan_sec_app_layered_rescale.cpp')
 
 # ================  load the data file and extract  ==================================
 Airline = load('Airline.RData')
-Airline = Airline[,-1]
 Y  = Airline$V2
 X0 = Airline$V3
 X1 = Airline$V4
