@@ -1191,11 +1191,6 @@ std::vector<std::vector<double>> single_segment_mult (double s, std::vector<doub
       // cur_val = bessel_bridge_pos(Time[time_size],Pos[time_size],tau,W_tau,lower,upper,cur_time);
       U_kill = runif(1)[0];
       prob = PHI_mult(cur_val,lower,upper)/Max;
-      if(prob > 1){
-        Rcpp::Rcout << "Value exceeded by Maximum" << " Phi" << prob*Max <<
-          " Max" << Max << " Cur_val" << cur_val[0] << endl;
-        Rcpp::Rcout << "cur_time" << cur_time << "Tau" << tau << endl;
-      }
       SKE[0].push_back(cur_time); SKE[1].push_back(tau); SKE[2].push_back(1);
       for(int k =0; k < dim; k++){
           SKE[3+k].push_back(cur_val[k]);
